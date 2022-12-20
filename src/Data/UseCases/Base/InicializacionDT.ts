@@ -1,0 +1,24 @@
+import { IInicializacionDT } from "../../../Domain/Interfaces/Aplication/Base";
+import { GetLoginAuthFn } from "./Login/GetLoginAuthFn";
+import { GetInitConfigCls } from "./InitConfig/GetInitConfigCls";
+
+export class InicializacionDT implements IInicializacionDT {
+  constructor(private readonly url: string, private readonly method: string) {}
+  
+  async GetLoginAuth(
+    body: IInicializacionDT.GetLoginAuthRequest
+  ): Promise<IInicializacionDT.GetLoginAuthResponse> {
+    return await GetLoginAuthFn(this.url, this.method, body);
+  }
+  
+  async GetInitConfig(url2: string, method2: string): Promise<boolean> {
+    const InitConfig = await new GetInitConfigCls(
+      this.url,
+      this.method,
+      url2,
+      method2
+    ).GetInitConfig();
+    return InitConfig;
+  }
+  
+}
