@@ -13,7 +13,7 @@ const FormAdministrador = ({ setDatosGerente, setOpen, representante }) => {
 
   console.log(representante);
   const { cDocumento, cNombres, cApellidoPaterno, cApellidoMaterno } =
-    representanteReniec;
+    representanteReniec.data;
   console.log("DESDE REGISTRAR REPRESENTANTE RENIEC");
   console.log(representanteReniec);
   return (

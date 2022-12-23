@@ -1,5 +1,4 @@
 import {
-  GetVehiculoIdResponse,
   VehiculoGetRequest,
   VehiculoResponseGetId,
 } from "../../../../../../Domain/Models/Apps/Licencias";
@@ -14,6 +13,7 @@ export async function getVehiculoIdFn(
   console.log(url);
   console.log(method);
   let responseVehiculo: VehiculoGetRequest = {
+    idModalidaIngreso: "",
     idEmpresa: "",
     idConductor: "",
     idPropietario: "",
@@ -40,6 +40,7 @@ export async function getVehiculoIdFn(
   const datosRespuesta = httpResponse.body?.data;
   if (httpResponse.body?.success === 1) {
     responseVehiculo = {
+      idModalidaIngreso: datosRespuesta.idModalidaIngreso,
       idEmpresa: datosRespuesta.idEmpresa,
       idConductor: datosRespuesta.idConductor,
       idPropietario: datosRespuesta.idPropietario,

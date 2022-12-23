@@ -263,6 +263,7 @@ const FormRegistrarVehiculo = ({ datoEmpresa, setOpenMAutorizacion }) => {
                   nAnioFabricacion: datosPlaca.nAnio ?? values.nAnioFabricacion,
                   nPeso: datosPlaca.nPeso ?? values.nPeso,
                   cClase: datosPlaca.cClase ?? values.cClase,
+                  idModalidaIngreso: "1"
                 });
                 console.log(httpResponse);
                 if (httpResponse.header.errors.length > 0) {

@@ -79,10 +79,12 @@ const ModalRegistrarAutorizacion = (ActualizarCard) => {
             console.log("BUSCAR RENIEC");
             const data = await new AutorizacionDT(representante).GetReniec();
             console.log("DATOS RENIEC");
-            console.log(data);
+            console.log(data.data);
             if (data.header.code === 200) {
-              if (data.cDocumento) {
+              if (data.data.cDocumento) {
                 Alertas("warning", "Registrar un nuevo Representante");
+                console.log("FRM REGISTRAR REPRESENTANTE");
+                console.log(data);
                 setRepresentateReniec(data);
                 setOpen(true);
               } else {

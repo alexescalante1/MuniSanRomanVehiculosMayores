@@ -16,6 +16,7 @@ export type VehiculoRequest = {
   nAnioFabricacion: string;
   nPeso: string;
   cClase: string;
+  idModalidaIngreso: string;
 };
 export type VehiculoGetRequest = {
   idVehiculo: string;
@@ -34,6 +35,7 @@ export type VehiculoGetRequest = {
   nAnioFabricacion: string;
   nPeso: string;
   cClase: string;
+  idModalidaIngreso: string;
 };
 export type VehiculoResponseData = {
   cPlaca: string;

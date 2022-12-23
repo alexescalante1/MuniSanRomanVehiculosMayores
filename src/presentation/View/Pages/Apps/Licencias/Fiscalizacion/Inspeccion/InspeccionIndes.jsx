@@ -60,9 +60,6 @@ const InspeccionIndes = () => {
     changeYear(seleccionarAnio);
     console.log("DESDE EL USE EFFECT INDEX");
   }, [actualizar]);
-  //**************************** *****/
-  //IMPRIMIR INSPECCION MASIVOS METODO
-  //****************************** */
 
   //**************************** *****/
   //BUSCAR EMPRESA POR RUC -- INSPECCION
